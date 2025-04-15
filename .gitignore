@@ -1,0 +1,6 @@
+__pycache__
+ws_env
+
+.env
+exchange.db
+KORBIT.json

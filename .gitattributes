@@ -1,0 +1,7 @@
+data/BITHUNB.json filter=lfs diff=lfs merge=lfs -text
+data/COINONE.json filter=lfs diff=lfs merge=lfs -text
+data/GOPAX.json filter=lfs diff=lfs merge=lfs -text
+data/KORBIT.json filter=lfs diff=lfs merge=lfs -text
+data/UPBIT.json filter=lfs diff=lfs merge=lfs -text
+data/KORBIT_01.json filter=lfs diff=lfs merge=lfs -text
+data/KORBIT_02.json filter=lfs diff=lfs merge=lfs -text
