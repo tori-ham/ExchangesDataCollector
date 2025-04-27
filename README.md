@@ -1,18 +1,18 @@
-# ✅ 과제 1: 실시간 호가 데이터 수집기
+# 📈 거래소 데이터 수집기
+<!-- # ✅ 과제 1: 거래소 호가 데이터 수집기 -->
 
 ## 개요
 
-Python으로 작성된 국내 거래소의 실시간 호가 데이터 수집 프로그램입니다.
+Python으로 작성된 거래소 실시간 데이터 수집 프로그램입니다.
+현재 호가(Orderbook)데이터만 수집 가능합니다.
 
-**과제2에서 Back-End 서비스를 FastAPI**로 구성했습니다.
-과제2의 Back-End에서도 거래소 API를 사용하기 때문에, Python으로 컨트롤러를 구성하여 호가 데이터를 수집하는게 **프로젝트 관리에 더 용이**할 것으로 판단했습니다.
-
-데이터 수집 대상 거래소는 A-Z 순으로 아래와 같습니다.
+현재 데이터 수집 대상 가능 거래소는 A-Z 순으로 아래와 같습니다.
   - Bithumb
-  - CoinOne,
+  - CoinOne
   - GOPAX
   - KorBit
   - Upbit
+추후, 설계 확장 후, 국내외 다른 거래소도 대응할 예정입니다.
 
 기본적으로 WebSocket을 이용하여 호가 데이터를 수집했으며, WebSocket API를 지원하지 않는 **Bithumb만 Rest API Polling**으로 수집하고 있습니다.
 - Bithumb에서 WebSocket API를 지원하는건 아니지만, Deprecated된 1.2.0 버젼과 Beta서비스중인 2.1.5버젼에서만 WebSocket이 지원되고있고, 현재 정식 지원되는 API 2.1.0 버젼에서는 WebSocket이 아닌 Rest API만 제공하고 있습니다.
@@ -104,7 +104,8 @@ python run_controller.py
 ```
 
 ---
-## 향후 추가 예정 사항 
+## 향후 추가 예정 사항
+- 대응 거래소 목록 DB 관리 후, WSController를 상속받는 개별 거래소 통합 가능하도록 설계 확장
+  - 현재 통합 컨트롤러 개발 완료
 - 날짜 변경 시, 로그 파일 변경
 - 로그 DB 적재 시스템 도입
-- WSController에서 다루는 Message, parser를 parameter화 하여, 거래소 확장 기능
